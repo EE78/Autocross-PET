@@ -1,0 +1,42 @@
+.start-page__container {
+    height: 100%;
+    background-image: linear-gradient(to right bottom, #ff0000, #c20023, #820327, #420f1d, #000000);
+    display: flex;
+    padding: 20px;
+}
+
+.container__title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.title__caption {
+    font-size: 48px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.title__quote {
+    font-size: 30px;
+    color: white;
+}
+
+.quote__author{
+    margin: 0;
+    font-size: 16px;
+    color: grey;
+}
+
+.container__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image__car {
+    width: 100%;
+}
