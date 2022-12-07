@@ -1,0 +1,27 @@
+.test {
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    border-color: white;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: brown;
+}
+
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+
+}
+
+.events-list {
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
