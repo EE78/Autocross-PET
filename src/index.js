@@ -1,18 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import Header from './components/Header-comp/Header';
-import MainInfo from './components/MainInfo-comp/MainInfo';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Header from "./components/Header-comp/Header";
 
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <div className='main-content'>
-   <Header />
-   <MainInfo />
-   </div>
+    <Header />
   </React.StrictMode>
 );
-
-

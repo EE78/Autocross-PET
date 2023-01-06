@@ -1,11 +1,14 @@
 .start-page__container {
-    height: 100%;
-        display: flex;
+     display: flex;
     padding: 20px;
-    
 }
 
-.container__title{
+.header__content {
+    background: linear-gradient(56deg, rgba(2, 0, 36, 1) 0%, rgba(0, 42, 60, 1) 60%);
+height: 100%;
+}
+
+.container__title {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -25,13 +28,13 @@
     color: white;
 }
 
-.quote__author{
+.quote__author {
     margin: 0;
     font-size: 16px;
     color: grey;
 }
 
-.container__image{
+.container__image {
     display: flex;
     justify-content: center;
     align-items: center;

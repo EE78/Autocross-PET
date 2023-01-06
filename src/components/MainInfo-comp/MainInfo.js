@@ -1,27 +1,29 @@
 import React, { useState } from "react";
 import "./MainInfo.css";
 import { Button } from "@mui/material";
-
+import events from "../../database/events";
 function MainInfo() {
-  const [showEvents, setShowEvents] = useState(" ");
+  const [showLocation, setShowLocation] = useState(" 4214");
+  const [showStatus, setShowStatus] = useState(" qe1232");
 
   return (
     <div>
-      <div className="button">
+      <div className="table">
         <Button
-          onClick={() => {
-            setShowEvents("Sdfgdfgdfg");
-          }}
           variant="contained"
           size="large"
+          onClick={() => {
+            setShowLocation(events.nsk.location);
+            setShowStatus(events.nsk.status);
+          }}
         >
-          LET`S RACE
+          Погоняем?
         </Button>
         <div className="events-list">
-          <p className="events"> {showEvents} </p>
-          <p className="events"> {showEvents} </p>
-          <p className="events"> {showEvents} </p>
-          <p className="events"> {showEvents} </p>
+          <div className="list__item">
+            <p>{showLocation}</p>
+            <p>{showStatus}</p>
+          </div>
         </div>
       </div>
     </div>
