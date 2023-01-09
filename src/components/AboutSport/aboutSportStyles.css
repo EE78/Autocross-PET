@@ -1,0 +1,14 @@
+.info__text {
+    color:  lightgrey;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

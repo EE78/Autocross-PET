@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./MainInfo.css";
+import "./eventsStyles.css";
 import { Button } from "@mui/material";
-import events from "../../database/events";
-function MainInfo() {
-  const [showLocation, setShowLocation] = useState(" 4214");
-  const [showStatus, setShowStatus] = useState(" qe1232");
+import cities from "../../database/events";
+
+function Events() {
+  const [showСity, setShowCity] = useState();
 
   return (
     <div>
@@ -13,16 +13,19 @@ function MainInfo() {
           variant="contained"
           size="large"
           onClick={() => {
-            setShowLocation(events.nsk.location);
-            setShowStatus(events.nsk.status);
+            setShowCity(
+              cities.find((city) => {
+                return city === "Томск";
+              })
+            );
           }}
         >
           Погоняем?
         </Button>
         <div className="events-list">
           <div className="list__item">
-            <p>{showLocation}</p>
-            <p>{showStatus}</p>
+            <p>{showСity}</p>
+            <Button variant="contained" size="large"> Когда гонка? </Button>
           </div>
         </div>
       </div>
@@ -30,4 +33,4 @@ function MainInfo() {
   );
 }
 
-export default MainInfo;
+export default Events;

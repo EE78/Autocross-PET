@@ -1,9 +1,10 @@
 import React from "react";
-import "./Header.css";
+import "./mainContainerStyles.css";
 import audi from "../../images/audi.png";
-import MainInfo from "../MainInfo-comp/MainInfo";
+// import Events from "../Events/events";
+import InfoAboutSport from "../AboutSport/aboutSport";
 
-function Header() {
+function MainContainer() {
   return (
     <div>
       <div className="header__content">
@@ -20,10 +21,11 @@ function Header() {
             <img className="image__car" alt="audi" src={audi}></img>
           </div>
         </div>
-        <MainInfo />
+        <InfoAboutSport />
+        {/* <Events /> */}
       </div>
     </div>
   );
 }
 
-export default Header;
+export default MainContainer;

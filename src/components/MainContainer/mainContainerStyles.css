@@ -1,11 +1,12 @@
 .start-page__container {
      display: flex;
-    padding: 20px;
+    
 }
 
 .header__content {
     background: linear-gradient(56deg, rgba(2, 0, 36, 1) 0%, rgba(0, 42, 60, 1) 60%);
 height: 100%;
+padding: 35px 75px 75px 75px
 }
 
 .container__title {
