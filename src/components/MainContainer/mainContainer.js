@@ -1,13 +1,15 @@
 import React from "react";
 import "./mainContainerStyles.css";
-import audi from "../../images/audi.png";
-// import Events from "../Events/events";
+import rkrlogo from "../../images/rkrlogo.png";
 import InfoAboutSport from "../AboutSport/aboutSport";
 
 function MainContainer() {
   return (
     <div>
       <div className="header__content">
+          <div className="left__logo">
+            <img  alt="rcr" src={rkrlogo}></img>
+          </div>
         <div className="start-page__container">
           <div className="container__title">
             <p className="title__caption">Автокросс и Ралли-кросс</p>
@@ -18,11 +20,10 @@ function MainContainer() {
             </p>
           </div>
           <div className="container__image">
-            <img className="image__car" alt="audi" src={audi}></img>
+
           </div>
         </div>
         <InfoAboutSport />
-        {/* <Events /> */}
       </div>
     </div>
   );

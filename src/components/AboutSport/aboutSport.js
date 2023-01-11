@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./aboutSportStyles.css";
-import { Button } from "@mui/material";
 import Menu from "../Menu/menu";
 
 function InfoAboutSport() {
-  const [showMenu, setShowMenu] = useState(false);
   return (
     <div>
       <div className="info__container">
@@ -16,20 +14,9 @@ function InfoAboutSport() {
           автомобили делятся на несколько классов, согласно уровню подготовки.
           Считаются одними из самых зрелищных видов автогонок.
         </p>
-        <Button
-          variant="outlined"
-          size="large"
-          onClick={() => {
-            setShowMenu(
-              !showMenu
-            );
-          }}
-        >
-          {!showMenu ? "НА СТАРТ !!!"   : "СОЙТИ С ЗАЕЗДА :("}
-        </Button>
       </div>
-   
-      {showMenu? <Menu /> : null}
+
+      <Menu />
     </div>
   );
 }
