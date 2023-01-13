@@ -2,6 +2,25 @@ import React, { useState } from "react";
 import "./menuStyles.css";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
+import MenuContent from "../../MenuContent/menuContent";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Fade from "@mui/material/Fade";
+import Button from "@mui/material/Button";
+import { styled } from "@mui/material/styles";
+
+const ModalButton = styled(Button)({
+  color: "black",
+  fontSize: 16,
+  padding: "20px 15px",
+  borderRadius: "10px",
+  backgroundColor: "#fe6b8b",
+  borderColor: "#ff8e53",
+  "&:hover": {
+    backgroundColor: "#ff8e53",
+    borderColor: "#0062cc",
+  },
+});
 
 const city = [
   "Томск",
@@ -30,82 +49,97 @@ const cars = [
   "Д3-Микро",
 ];
 
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "lightblue",
+  border: "2px solid #000",
+  borderRadius: "20px",
+  boxShadow: 24,
+  p: 4,
+};
+
 function Menu() {
   const [showCars, setShowCars] = useState(false);
   const [showTracks, setShowTracks] = useState(false);
-  const [showDocs, setShowDocs] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
   return (
-    <div className="menu__buttons">
-      {/* <div>
-        <Button
-          className="button"
-          variant="outlined"
-          size="large"
-          onClick={() => {
-            setShowCars(!showCars);
+    <div>
+      <div className="menu__buttons">
+        <Autocomplete
+          disablePortal
+          id="combo-box-demo"
+          options={cars}
+          onChange={() => {
+            setShowCars(true);
+            setShowButton(true);
           }}
-        >
-          {!showCars ? "НА КАКИХ МАШИНАХ ГОНЯЮТ? " : "ПРО МАШИНЫ ПОНЯТНО"}
-        </Button>
-        <div className="test"> {showCars ? <MenuContent /> : null} </div>
-      </div> */}
+          sx={{
+            width: 300,
+            p: 1,
+            input: { color: "black" },
+            label: { color: "black" },
+          }}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              label={
+                !showCars ? "НА КАКИХ МАШИНАХ ГОНЯЮТ? " : "ВЫБРАН КЛАСС АВТО"
+              }
+            />
+          )}
+        />
 
-      <Autocomplete
-        disablePortal
-        id="combo-box-demo"
-        options={cars}
-        sx={{
-          width: 300,
-          p: 1,
-          input: { color: "black" },
-          label: { color: "black" },
-        }}
-        renderInput={(params) => (
-          <TextField {...params} label="НА КАКИХ МАШИНАХ ГОНЯЮТ?" />
-        )}
-      />
-      <Autocomplete
-        disablePortal
-        id="combo-box-demo"
-        options={city}
-        sx={{
-          width: 300,
-          p: 1,
-          input: { color: "black" },
-          label: { color: "black" },
-        }}
-        renderInput={(params) => (
-          <TextField {...params} label="НА КАКИХ ТРАССАХ ГОНЯЮТ?" />
-        )}
-      />
-
-      {/* <div>
-        <Button
-          className="button"
-          variant="outlined"
-          size="large"
-          onClick={() => {
+        <Autocomplete
+          id="combo-box-demo"
+          options={city}
+          onChange={() => {
             setShowTracks(!showTracks);
+            setShowButton(true);
           }}
-        >
-          {!showTracks ? "НА КАКИХ ТРАССАХ ГОНЯЮТ? " : "ПРО ТРАССЫ ПОНЯТНО"}
-        </Button>
-        <div className="test"> {showTracks ? <MenuContent /> : null} </div>
+          sx={{
+            width: 300,
+            p: 1,
+            input: { color: "black" },
+            label: { color: "black" },
+          }}
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              label={
+                !showTracks ? "НА КАКИХ ТРАССАХ ГОНЯЮТ? " : "ВЫБРАНА ТРАССА"
+              }
+              value={showTracks}
+            />
+          )}
+        />
       </div>
-      <div>
-        <Button
-          className="button"
-          variant="outlined"
-          size="large"
-          onClick={() => {
-            setShowDocs(!showDocs);
-          }}
-        >
-          {!showDocs ? "ЧТО ЕЩЕ ИНТЕРЕСНОГО? " : "ПРО ИНТЕРЕСНОЕ ПОНЯТНО"}
-        </Button>
-        <div className="test"> {showDocs ? <MenuContent /> : null} </div>
-      </div> */}
+
+      {showButton ? (
+        <div className="modal__openButton">
+          <ModalButton variant="contained" onClick={() => setOpen(true)}>
+            УЗНАТЬ ПОДРОБНЕЕ
+          </ModalButton>
+        </div>
+      ) : null}
+
+      <Modal open={open} closeAfterTransition>
+        <Fade in={open}>
+          <Box sx={style}>
+            <div className="modal__content">
+              <MenuContent />
+              <ModalButton variant="contained" onClick={() => setOpen(false)}>
+                УЗНАЛ ПОДРОБНЕЕ
+              </ModalButton>
+            </div>
+          </Box>
+        </Fade>
+      </Modal>
     </div>
   );
 }

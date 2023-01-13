@@ -1,0 +1,7 @@
+.test {
+    display: flex;
+    background-color: blueviolet;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
