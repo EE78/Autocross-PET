@@ -1,8 +1,10 @@
-import React, {useState} from "react";
-import "./aboutSportStyles.css";
-import Menu from "../Menu/menu";
+import React from "react";
+import "./AboutSportStyles.css";
+import Menu from "../Menu/Menu";
 
-function InfoAboutSport() {
+
+
+function AboutSport() {
   return (
     <div>
       <div className="info__container">
@@ -15,10 +17,9 @@ function InfoAboutSport() {
           Считаются одними из самых зрелищных видов автогонок.
         </p>
       </div>
-
       <Menu />
     </div>
   );
 }
 
-export default InfoAboutSport;
+export default AboutSport;

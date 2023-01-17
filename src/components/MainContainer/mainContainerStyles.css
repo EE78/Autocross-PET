@@ -1,13 +1,13 @@
 .header__content {
     background: linear-gradient(56deg, rgba(2, 0, 52, 1) 0%, rgba(154, 0, 0, 1) 90%);
     padding: 15px 75px 75px 75px;
-    height: 100%;
 }
 
 .start-page__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -16,7 +16,6 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     text-align: center;
 }
 
@@ -29,14 +28,16 @@
 }
 
 .title__quote {
-    font-size: 30px;
+    font-size: 24px;
     color: white;
+    margin-bottom: 10px;
 }
 
 .quote__author {
     margin: 0;
     font-size: 16px;
     color: grey;
+    margin-bottom: 20px;
 }
 
 .container__image {
@@ -45,12 +46,9 @@
     align-items: center;
 }
 
-.container__image__left {
-    margin-right: 70px;
-}
 
-.left__logo {
+.logo {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 24px;
 }
