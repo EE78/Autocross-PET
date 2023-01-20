@@ -19,7 +19,7 @@ const ModalMenuButton = styled(Button)({
   borderRadius: "10px",
   backgroundColor: "#4e47a9a4",
   "&:hover": {
-    backgroundColor: "#ff8e53",
+    backgroundColor: "#3c7e17",
   },
   margin: "30px 10px 0 10px",
   textAlign: "center",
@@ -122,7 +122,8 @@ const MenuModalStyles = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: "50%",
-  bgcolor: "#a8475c",
+  boxShadow: 24,
+  bgcolor: "#040136",
   borderRadius: "20px",
   p: 5,
 };
