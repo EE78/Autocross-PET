@@ -1,0 +1,10 @@
+.active-menu__box {
+    display: flex;
+    justify-content: center;
+}
+
+.box__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

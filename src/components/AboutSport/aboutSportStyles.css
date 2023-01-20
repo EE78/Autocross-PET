@@ -1,12 +1,13 @@
-.info__container{
+.aboutsport__info {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
+
 .info__text {
-    color:  lightgrey;
-    font-size: 18px;
+    color: lightgrey;
+    font-size: 20px;
     text-align: center;
-    margin-top: 20px;
+    width: 50%;
+    margin: 20px 0 25px 0;
 }
