@@ -51,11 +51,11 @@ const ContentTracks = () => {
                   <h1 className="element__name">СТАТУС ГОНКИ:</h1>
                   <p className="element__value">{raceStatus}</p>
                 </div>
-                <div className="text__element">
+                <div className="info__element">
                   <h1 className="element__name">РЕЗУЛЬТАТЫ ГОНКИ:</h1>
                   <p className="element__value">{raceResults}</p>
                 </div>
-                <div className="text__element">
+                <div className="info__element">
                   <h1 className="element__name">ЭТАПОВ ВСЕГО</h1>
                   <p className="element__value">{raceStages}</p>
                 </div>
