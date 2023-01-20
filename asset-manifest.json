@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/AutocrossInSiberia/static/css/main.1cec8981.css",
+    "main.js": "/AutocrossInSiberia/static/js/main.e3067447.js",
+    "static/media/rkrlogo.png": "/AutocrossInSiberia/static/media/rkrlogo.4dad09ff5a88110f8b80.png",
+    "index.html": "/AutocrossInSiberia/index.html",
+    "main.1cec8981.css.map": "/AutocrossInSiberia/static/css/main.1cec8981.css.map",
+    "main.e3067447.js.map": "/AutocrossInSiberia/static/js/main.e3067447.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1cec8981.css",
+    "static/js/main.e3067447.js"
+  ]
+}
