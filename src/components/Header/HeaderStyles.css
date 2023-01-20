@@ -1,0 +1,12 @@
+.header__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header__box h1 {
+    color: white;
+    margin: 30px 0 0 0;
+    font-size: 40px;
+}
