@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import "./ContentStyles/ContentStyles.css";
-import rkrlogo from "./ContentImages/rkrlogo.png";
-import { RacesCities } from "./ContentConstants";
-import { ModalMenuButton, MenuModalStyles } from "./ContentStyles/ContentModalAndButtonStyles";
+import "./ContentStyles.css";
+import rkrlogo from "./Images/rkrlogo.png";
+import { RacesCities } from "./ContentDB";
+import { MenuModalStyles } from "../../Shared/Ui/ContentModalStyles";
+import { ModalMenuButton } from "../../Shared/Ui/ContentButtonStyles";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
+
+// ВЫНЕСТИ В INDEX.JS ДЛЯ РЕЭКСПОРТА
 
 const ContentTracks = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,6 +47,7 @@ const ContentTracks = () => {
       >
         <Fade in={isOpen}>
           <Box sx={MenuModalStyles}>
+            {/* ВЫНЕСТИ В SHARED/UI */}
             <div className="active-menu__modal">
               <img src={rkrlogo} alt=" "></img>
               <div className="modal__info">
@@ -65,7 +69,7 @@ const ContentTracks = () => {
                   setIsOpen(false);
                 }}
               >
-                ПОНЯТНО ПРО ГОНКИ
+                ВЕРНУТЬСЯ К СПИСКУ ГОНОЧНЫХ ТРЕКОВ
               </ModalMenuButton>
             </div>
           </Box>

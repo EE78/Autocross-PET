@@ -1,18 +1,20 @@
 import React, { useState } from "react";
-import "./ContentStyles/ContentStyles.css";
-import { CrossCars } from "./ContentConstants";
-import { ModalMenuButton, MenuModalStyles } from "./ContentStyles/ContentModalAndButtonStyles";
+import "./ContentStyles.css";
+import { CrossCars } from "./ContentDB";
+import { MenuModalStyles } from "../../Shared/Ui/ContentModalStyles";
+import { ModalMenuButton } from "../../Shared/Ui/ContentButtonStyles";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import rkrlogo from "./ContentImages/rkrlogo.png";
+import rkrlogo from "./Images/rkrlogo.png";
+
+// ВЫНЕСТИ В INDEX.JS ДЛЯ РЕЭКСПОРТА
 
 const ContentCars = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [carHp, setCarHp] = useState("");
   const [carType, setCarType] = useState("");
   const [carPrice, setCarPrice] = useState("");
-  
 
   return (
     <div>
@@ -45,6 +47,7 @@ const ContentCars = () => {
       >
         <Fade in={isOpen}>
           <Box sx={MenuModalStyles}>
+            {/* ВЫНЕСТИ В SHARED/UI */}
             <div className="active-menu__modal">
               <img src={rkrlogo} alt=" "></img>
               <div className="modal__info">
@@ -66,7 +69,7 @@ const ContentCars = () => {
                   setIsOpen(false);
                 }}
               >
-                ПОНЯТНО ПРО МАШИНУ
+                ВЕРНУТЬСЯ К СПИСКУ КЛАССОВ АВТОМОБИЛЕЙ
               </ModalMenuButton>
             </div>
           </Box>
