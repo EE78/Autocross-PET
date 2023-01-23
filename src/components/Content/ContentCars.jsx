@@ -1,34 +1,35 @@
 import React, { useState } from "react";
-import "./ActiveMenuContentStyles.css";
-import rkrlogo from "./ActiveMenuContentImages/rkrlogo.png";
-import { RacesCities } from "../../constants/constants";
-import { ModalMenuButton, MenuModalStyles } from "../../constants/constants";
+import "./ContentStyles/ContentStyles.css";
+import { CrossCars } from "./ContentConstants";
+import { ModalMenuButton, MenuModalStyles } from "./ContentStyles/ContentModalAndButtonStyles";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
+import rkrlogo from "./ContentImages/rkrlogo.png";
 
-const ContentTracks = () => {
+const ContentCars = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [raceStatus, setRaceStatus] = useState("");
-  const [raceResults, setRaceResults] = useState("");
-  const [raceStages, setRaceStages] = useState("");
+  const [carHp, setCarHp] = useState("");
+  const [carType, setCarType] = useState("");
+  const [carPrice, setCarPrice] = useState("");
+  
 
   return (
     <div>
       <div className="active-menu__content">
-        {RacesCities.map((place) => {
+        {CrossCars.map((car) => {
           return (
             <div>
               <ModalMenuButton
                 onClick={() => {
                   setIsOpen(true);
-                  setRaceStatus(place.status);
-                  setRaceResults(place.results);
-                  setRaceStages(place.stages);
+                  setCarHp(car.hp);
+                  setCarType(car.type);
+                  setCarPrice(car.price);
                 }}
-                key={place}
+                key={car}
               >
-                {place.city}
+                {car.class}
               </ModalMenuButton>
             </div>
           );
@@ -48,16 +49,16 @@ const ContentTracks = () => {
               <img src={rkrlogo} alt=" "></img>
               <div className="modal__info">
                 <div className="info__element">
-                  <h1 className="element__name">СТАТУС ГОНКИ:</h1>
-                  <p className="element__value">{raceStatus}</p>
+                  <h1 className="element__name">МОЩНОСТЬ:</h1>
+                  <p className="element__value">{carHp}</p>
                 </div>
                 <div className="info__element">
-                  <h1 className="element__name">РЕЗУЛЬТАТЫ ГОНКИ:</h1>
-                  <p className="element__value">{raceResults}</p>
+                  <h1 className="element__name">ПРИВОД:</h1>
+                  <p className="element__value">{carType}</p>
                 </div>
                 <div className="info__element">
-                  <h1 className="element__name">ЭТАПОВ ВСЕГО</h1>
-                  <p className="element__value">{raceStages}</p>
+                  <h1 className="element__name">ЦЕНА:</h1>
+                  <p className="element__value">{carPrice}</p>
                 </div>
               </div>
               <ModalMenuButton
@@ -65,7 +66,7 @@ const ContentTracks = () => {
                   setIsOpen(false);
                 }}
               >
-                ПОНЯТНО ПРО ГОНКИ
+                ПОНЯТНО ПРО МАШИНУ
               </ModalMenuButton>
             </div>
           </Box>
@@ -75,4 +76,4 @@ const ContentTracks = () => {
   );
 };
 
-export default ContentTracks;
+export default ContentCars;

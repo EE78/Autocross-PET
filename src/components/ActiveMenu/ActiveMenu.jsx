@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./ActiveMenuStyles.css";
-import ContentCars from "../ActiveMenuContent/ContentCars";
-import ContentTracks from "../ActiveMenuContent/ContentTracks";
-import { MenuButton } from "../../constants/constants";
+import ContentCars from "../Content/ContentCars";
+import ContentTracks from "../Content/ContentTracks";
+import { MenuButton } from "./ActiveMenuButton";
 
 const ActiveMenu = () => {
   const [showCars, setShowCars] = useState(false);
@@ -18,7 +18,7 @@ const ActiveMenu = () => {
           }}
         >
           {showCars
-            ? "ПОНЯТНО ПРО МАШИНЫ"
+            ? "ТЕПЕРЬ Я ЗНАЮ ПРО МАШИНЫ"
             : "КАКИЕ КЛАССЫ МАШИН ЕСТЬ В КРОССЕ?"}
         </MenuButton>
         {showCars ? <ContentCars /> : null}
@@ -31,7 +31,7 @@ const ActiveMenu = () => {
           }}
         >
           {showTracks
-            ? "ПОНЯТНО ПРО ТРАССЫ"
+            ? "ТЕПЕРЬ Я ЗНАЮ ПРО ТРАССЫ"
             : "В КАКИХ ГОРОДАХ ПРОХОДЯТ ГОНКИ?"}
         </MenuButton>
         {showTracks ? <ContentTracks /> : null}
