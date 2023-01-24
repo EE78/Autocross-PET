@@ -3,7 +3,6 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import AboutSport from "./components/AboutSport/AboutSport";
 import ActiveMenu from "./components/ActiveMenu/ActiveMenu";
-// import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
@@ -13,7 +12,9 @@ const App = () => {
         <AboutSport />
       </div>
       <div className="app-container__right-side">
-        <ActiveMenu />
+        <div >
+          <ActiveMenu />
+        </div>
       </div>
     </div>
   );
