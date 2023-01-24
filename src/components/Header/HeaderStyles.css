@@ -1,12 +1,16 @@
 .header__box {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
 }
 
 .header__box h1 {
     color: white;
-    margin: 28px 0 0 0;
+    margin: 0px 0 0 30px;
     font-size: 40px;
+}
+
+.header__box img {
+    margin: 30px;
 }

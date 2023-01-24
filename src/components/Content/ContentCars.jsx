@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./ContentStyles.css";
 import { CrossCars } from "./ContentDB";
-import { MenuModalStyles } from "../../Shared/Ui/ContentModalStyles";
-import { ModalMenuButton } from "../../Shared/Ui/ContentButtonStyles";
+import { MenuModalStyles } from "../../shared/Ui/ContentModalStyles";
+import { ModalMenuButton } from "../../shared/Ui/ContentButtonStyles";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
@@ -16,35 +16,32 @@ const ContentCars = () => {
   const [carType, setCarType] = useState("");
   const [carPrice, setCarPrice] = useState("");
 
+  const СhooseCar = CrossCars.map((car) => {
+    return (
+      <div>
+        <ModalMenuButton
+          onClick={() => {
+            setIsOpen(true);
+            setCarHp(car.hp);
+            setCarType(car.type);
+            setCarPrice(car.price);
+          }}
+          key={car}
+        >
+          {car.class}
+        </ModalMenuButton>
+      </div>
+    );
+  });
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div>
-      <div className="active-menu__content">
-        {CrossCars.map((car) => {
-          return (
-            <div>
-              <ModalMenuButton
-                onClick={() => {
-                  setIsOpen(true);
-                  setCarHp(car.hp);
-                  setCarType(car.type);
-                  setCarPrice(car.price);
-                }}
-                key={car}
-              >
-                {car.class}
-              </ModalMenuButton>
-            </div>
-          );
-        })}
-      </div>
-
-      <Modal
-        open={isOpen}
-        onClose={() => {
-          setIsOpen(false);
-        }}
-        closeAfterTransition
-      >
+      <div className="active-menu__content">{СhooseCar}</div>
+      <Modal open={isOpen} onClose={handleClose} closeAfterTransition>
         <Fade in={isOpen}>
           <Box sx={MenuModalStyles}>
             {/* ВЫНЕСТИ В SHARED/UI */}
@@ -64,11 +61,7 @@ const ContentCars = () => {
                   <p className="element__value">{carPrice}</p>
                 </div>
               </div>
-              <ModalMenuButton
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-              >
+              <ModalMenuButton onClick={handleClose}>
                 ВЕРНУТЬСЯ К СПИСКУ КЛАССОВ АВТОМОБИЛЕЙ
               </ModalMenuButton>
             </div>

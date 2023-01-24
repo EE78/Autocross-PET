@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./ContentStyles.css";
 import rkrlogo from "./Images/rkrlogo.png";
 import { RacesCities } from "./ContentDB";
-import { MenuModalStyles } from "../../Shared/Ui/ContentModalStyles";
-import { ModalMenuButton } from "../../Shared/Ui/ContentButtonStyles";
+import { MenuModalStyles } from "../../shared/Ui/ContentModalStyles";
+import { ModalMenuButton } from "../../shared/Ui/ContentButtonStyles";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
@@ -16,35 +16,34 @@ const ContentTracks = () => {
   const [raceResults, setRaceResults] = useState("");
   const [raceStages, setRaceStages] = useState("");
 
+  
+  const ChooseCity = RacesCities.map((place) => {
+    return (
+      <div>
+        <ModalMenuButton
+          onClick={() => {
+            setIsOpen(true);
+            setRaceStatus(place.status);
+            setRaceResults(place.results);
+            setRaceStages(place.stages);
+          }}
+          key={place}
+        >
+          {place.city}
+        </ModalMenuButton>
+      </div>
+    );
+  });
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div>
-      <div className="active-menu__content">
-        {RacesCities.map((place) => {
-          return (
-            <div>
-              <ModalMenuButton
-                onClick={() => {
-                  setIsOpen(true);
-                  setRaceStatus(place.status);
-                  setRaceResults(place.results);
-                  setRaceStages(place.stages);
-                }}
-                key={place}
-              >
-                {place.city}
-              </ModalMenuButton>
-            </div>
-          );
-        })}
-      </div>
+      <div className="active-menu__content">{ChooseCity}</div>
 
-      <Modal
-        open={isOpen}
-        onClose={() => {
-          setIsOpen(false);
-        }}
-        closeAfterTransition
-      >
+      <Modal open={isOpen} onClose={handleClose} closeAfterTransition>
         <Fade in={isOpen}>
           <Box sx={MenuModalStyles}>
             {/* ВЫНЕСТИ В SHARED/UI */}
@@ -64,11 +63,7 @@ const ContentTracks = () => {
                   <p className="element__value">{raceStages}</p>
                 </div>
               </div>
-              <ModalMenuButton
-                onClick={() => {
-                  setIsOpen(false);
-                }}
-              >
+              <ModalMenuButton onClick={handleClose}>
                 ВЕРНУТЬСЯ К СПИСКУ ГОНОЧНЫХ ТРЕКОВ
               </ModalMenuButton>
             </div>

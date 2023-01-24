@@ -1,10 +1,10 @@
 .active-menu__content {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 350px;
+    margin-right: 25px;
 }
 
 .active-menu__modal {
