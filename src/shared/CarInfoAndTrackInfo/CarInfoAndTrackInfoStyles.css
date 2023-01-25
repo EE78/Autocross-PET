@@ -1,0 +1,27 @@
+.car-info__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.car-info__container h1 {
+    margin: 10px;
+    font-weight: 200;
+    font-size: 28px;
+}
+
+.track-info__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.track-info__container h1 {
+    margin: 10px;
+    font-weight: 200;
+    font-size: 28px;
+}

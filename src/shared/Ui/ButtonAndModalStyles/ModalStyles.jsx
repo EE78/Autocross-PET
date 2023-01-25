@@ -1,4 +1,4 @@
-const MenuModalStyles = {
+const ModalStyles = {
   position: "absolute",
   top: "50%",
   left: "50%",
@@ -10,4 +10,4 @@ const MenuModalStyles = {
   p: 5,
 };
 
-export { MenuModalStyles };
+export { ModalStyles };
