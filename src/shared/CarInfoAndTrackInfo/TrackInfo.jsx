@@ -14,7 +14,7 @@ const TrackInfo = ({
       <img src={image} alt=" "></img>
       <h1>СТАТУС ГОНКИ: {raceStatus}</h1>
       <h1>РЕЗУЛЬТАТЫ ГОНКИ: {raceResults}</h1>
-      <h1>ЭТАПОВ ВСЕГО {raceStages}</h1>
+      <h1>ЭТАПОВ ВСЕГО: {raceStages}</h1>
       <ModalButton onClick={handleClose}>{textButton}</ModalButton>
     </div>
   );
