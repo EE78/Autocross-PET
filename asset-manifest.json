@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/AutocrossInSiberia/static/css/main.f595e3fd.css",
-    "main.js": "/AutocrossInSiberia/static/js/main.fc017d65.js",
+    "main.css": "/AutocrossInSiberia/static/css/main.10ae2778.css",
+    "main.js": "/AutocrossInSiberia/static/js/main.d12894f7.js",
     "static/media/rkrlogo.png": "/AutocrossInSiberia/static/media/rkrlogo.4dad09ff5a88110f8b80.png",
     "index.html": "/AutocrossInSiberia/index.html",
-    "main.f595e3fd.css.map": "/AutocrossInSiberia/static/css/main.f595e3fd.css.map",
-    "main.fc017d65.js.map": "/AutocrossInSiberia/static/js/main.fc017d65.js.map"
+    "main.10ae2778.css.map": "/AutocrossInSiberia/static/css/main.10ae2778.css.map",
+    "main.d12894f7.js.map": "/AutocrossInSiberia/static/js/main.d12894f7.js.map"
   },
   "entrypoints": [
-    "static/css/main.f595e3fd.css",
-    "static/js/main.fc017d65.js"
+    "static/css/main.10ae2778.css",
+    "static/js/main.d12894f7.js"
   ]
 }
