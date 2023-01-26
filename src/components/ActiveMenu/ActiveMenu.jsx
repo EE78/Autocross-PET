@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./ActiveMenuStyles/ActiveMenuStyles.css";
-import { MenuButton } from "./ActiveMenuStyles/ActiveMenuButton";
+import "./ActiveMenuStyles.css";
 import { Cars, Tracks } from "../ActiveMenuContent";
+import { ActiveMenuImages } from "../ActiveMenuImages/ActiveMenuImages";
 
 const ActiveMenu = () => {
   const [showCars, setShowCars] = useState(false);
@@ -15,24 +15,28 @@ const ActiveMenu = () => {
     setShowTracks((prevState) => !prevState);
   };
 
-  const showCarsText = showCars ? "ЗАКРЫТЬ КЛАССЫ МАШИН" : "КЛАССЫ МАШИН";
+  const showCarsText = showCars
+    ? "ЗАКРЫТЬ КЛАССЫ КРОССОВЫХ МАШИН "
+    : "ПОКАЗАТЬ КРОССОВЫЕ МАШИНЫ";
 
-  const showTracksText = showTracks ? "ЗАКРЫТЬ ГОНОЧНЫЕ ТРЕКИ" : "ГОНОЧНЫЕ ТРЕКИ";
+  const showTracksText = showTracks
+    ? "ЗАКРЫТЬ СПИСОК ГОНОЧНЫХ ТРЕКОВ"
+    : "ПОКАЗАТЬ ГОНОЧНЫЕ ТРЕКИ";
 
   return (
     <div className="active-menu__list-buttons">
-      <div className="list-buttons__content">
-        <MenuButton variant="outlined" onClick={handleShowCars}>
+      <div>
+        <button className="list-buttons__opener" onClick={handleShowCars}>
           {showCarsText}
-        </MenuButton>
-        {showCars ? <Cars /> : null}
-      </div>
+        </button>
 
-      <div className="list-buttons__content">
-        <MenuButton variant="outlined" onClick={handleShowTracks}>
+        {showCars ? <Cars /> : <ActiveMenuImages />}
+      </div>
+      <div>
+        <button className="list-buttons__opener" onClick={handleShowTracks}>
           {showTracksText}
-        </MenuButton>
-        {showTracks ? <Tracks /> : null}
+        </button>
+        {showTracks ? <Tracks /> : <ActiveMenuImages />}
       </div>
     </div>
   );

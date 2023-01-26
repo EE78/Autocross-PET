@@ -1,0 +1,28 @@
+.active-menu-content__buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.active-menu__opener {
+    width: 185px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    font-weight: 300;
+    text-align: center;
+}
+
+.active-menu__opener:hover {
+    opacity: 0.75;
+}
+
+.content-buttons__active-name {
+    color: white;
+    text-align: center;
+}

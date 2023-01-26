@@ -12,12 +12,42 @@
     font-size: 28px;
 }
 
-.track-info__container{
+.track-info__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+.track-info__container button {
+    height: 35px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 200;
+    text-align: center;
+    cursor: pointer;
+}
+
+.car-info__container button {
+    height: 35px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: 200;
+    text-align: center;
+    cursor: pointer;
+}
+
+.track-info__container button:hover {
+    opacity: 0.75;
+}
+
+.car-info__container button:hover {
+    opacity: 0.75;
 }
 
 .track-info__container h1 {

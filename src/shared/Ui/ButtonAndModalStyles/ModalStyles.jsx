@@ -5,7 +5,7 @@ const ModalStyles = {
   transform: "translate(-50%, -50%)",
   width: "50%",
   boxShadow: 24,
-  bgcolor: "#040136",
+  bgcolor: "#041036",
   borderRadius: "20px",
   p: 5,
 };

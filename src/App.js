@@ -1,15 +1,13 @@
 import React from "react";
 import "./App.css";
-import TextContent from "./components/TextContent/TextContent";
-import ActiveMenu from "./components/ActiveMenu/ActiveMenu";
+import { MainContent } from "./components/MainContent/MainContent";
 
 const App = () => {
   return (
     <div className="app-container">
-      <TextContent />
-      <ActiveMenu />
+      <MainContent />
     </div>
-  )
+  );
 };
 
 export default App;

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "./ActiveMeniContentStyles.css";
+import "./ActiveMenuContentStyles.css";
 import { CrossCars } from "./ActiveMenuContentDB";
 import { ModalStyles } from "../../shared/Ui/ButtonAndModalStyles/ModalStyles";
-import { ModalButton } from "../../shared/Ui/ButtonAndModalStyles/ButtonStyles";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
@@ -16,6 +15,7 @@ const Cars = () => {
   const [carHp, setCarHp] = useState("");
   const [carType, setCarType] = useState("");
   const [carPrice, setCarPrice] = useState("");
+  const [isActive, setIsActive] = useState("");
 
   const СhooseCar = CrossCars.map((car) => {
     const showActiveCarInfo = () => {
@@ -23,13 +23,18 @@ const Cars = () => {
       setCarHp(car.hp);
       setCarType(car.type);
       setCarPrice(car.price);
+      setIsActive(car.class);
     };
 
     return (
       <div>
-        <ModalButton onClick={showActiveCarInfo} key={car}>
+        <button
+          className="active-menu__opener"
+          onClick={showActiveCarInfo}
+          key={car}
+        >
           {car.class}
-        </ModalButton>
+        </button>
       </div>
     );
   });
@@ -44,6 +49,7 @@ const Cars = () => {
       <Modal open={isOpen} onClose={handleClose} closeAfterTransition>
         <Fade in={isOpen}>
           <Box sx={ModalStyles}>
+            <h1 className="content-buttons__active-name">{isActive}</h1>
             <CarInfo
               image={rkrlogo}
               carHp={carHp}
@@ -64,6 +70,7 @@ const Tracks = () => {
   const [raceStatus, setRaceStatus] = useState("");
   const [raceResults, setRaceResults] = useState("");
   const [raceStages, setRaceStages] = useState("");
+  const [isActive, setIsActive] = useState("");
 
   const ChooseCity = RacesCities.map((place) => {
     const showActiveTrackInfo = () => {
@@ -71,13 +78,18 @@ const Tracks = () => {
       setRaceStatus(place.status);
       setRaceResults(place.results);
       setRaceStages(place.stages);
+      setIsActive(place.city);
     };
 
     return (
       <div>
-        <ModalButton onClick={showActiveTrackInfo} key={place}>
+        <button
+          className="active-menu__opener"
+          onClick={showActiveTrackInfo}
+          key={place}
+        >
           {place.city}
-        </ModalButton>
+        </button>
       </div>
     );
   });
@@ -88,10 +100,11 @@ const Tracks = () => {
 
   return (
     <div>
-      <div  className="active-menu-content__buttons">{ChooseCity}</div>
+      <div className="active-menu-content__buttons">{ChooseCity}</div>
       <Modal open={isOpen} onClose={handleClose} closeAfterTransition>
         <Fade in={isOpen}>
           <Box sx={ModalStyles}>
+            <h1 className="content-buttons__active-name">{isActive}</h1>
             <TrackInfo
               image={rkrlogo}
               raceStatus={raceStatus}
