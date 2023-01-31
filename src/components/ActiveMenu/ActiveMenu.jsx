@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./ActiveMenuStyles.css";
 import { Cars, Tracks } from "../ActiveMenuContent";
-import { ActiveMenuImages } from "../ActiveMenuImages/ActiveMenuImages";
 
 const ActiveMenu = () => {
   const [showCars, setShowCars] = useState(false);
@@ -30,13 +29,13 @@ const ActiveMenu = () => {
           {showCarsText}
         </button>
 
-        {showCars ? <Cars /> : <ActiveMenuImages />}
+        {showCars ? <Cars /> : null}
       </div>
       <div>
         <button className="list-buttons__opener" onClick={handleShowTracks}>
           {showTracksText}
         </button>
-        {showTracks ? <Tracks /> : <ActiveMenuImages />}
+        {showTracks ? <Tracks /> : null}
       </div>
     </div>
   );
