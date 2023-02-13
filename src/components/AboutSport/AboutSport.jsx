@@ -1,10 +1,11 @@
 import React from "react";
 import "./AboutSportStyles.css";
+import {WrapperText, WrapperButton}  from "./AboutSportStyled";
 
 export const AboutSport = ({ handleClose }) => {
   return (
-    <div className="about-sport__wrapper">
-      <p>
+    <div >
+      <WrapperText>
         Автокросс представляет собой кольцевые заезды по трассе, не имеющей
         асфальто-бетонного покрытия, либо частично покрытой асфальтом. Все
         пилоты стартуют одновременно, в соответствии с результатами
@@ -12,8 +13,8 @@ export const AboutSport = ({ handleClose }) => {
         уровню подготовки. Автокросс широко распространен в Сибирском
         Федеральном Округе. Кроссовые трассы, на которых проходят автогонки
         различного уровня и статуса, распологаются в каждом регионе Сибири.
-      </p>
-      <button onClick={handleClose}>ЗАКРЫТЬ ПОДРОБНОЕ ОПИСАНИЕ</button>
+      </WrapperText>
+      <WrapperButton onClick={handleClose}>ЗАКРЫТЬ ПОДРОБНОЕ ОПИСАНИЕ</WrapperButton>
     </div>
   );
 };
