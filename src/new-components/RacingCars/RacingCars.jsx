@@ -12,7 +12,7 @@ import {
   RacingCarsTitle,
   CarModalTitle,
 } from "./StyledRacingCars";
-import "./styles.css";
+
 
 const RacingCars = () => {
   const [isOpen, setIsOpen] = useState(false);
