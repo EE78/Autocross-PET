@@ -8,6 +8,8 @@ const ModalStyles = {
   bgcolor: "#041036",
   borderRadius: "20px",
   p: 5,
+  display: "flex",
+  flexDirection: "column",
 };
 
 export { ModalStyles };

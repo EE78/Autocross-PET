@@ -1,5 +1,5 @@
 .app-container {
   background: linear-gradient(36deg, #040136 0%, #3c7e17 120%);
-  display: flex;
-  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
