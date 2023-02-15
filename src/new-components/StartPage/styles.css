@@ -5,29 +5,30 @@
 
 .startpage__content {
     display: flex;
-justify-content: space-between;
-align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.startpage__content-right{
-    width: 50%;
-    display: flex;
-    justify-content: center
-}
-.startpage__content-left{
+.startpage__content-right {
     width: 50%;
     display: flex;
     justify-content: center
 }
 
-.wrapper__menu{
+.startpage__content-left {
+    width: 50%;
+    display: flex;
+    justify-content: center
+}
+
+.wrapper__menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-.menu__links{
+.menu__links {
     display: flex;
     justify-content: space-around;
     width: 50%;

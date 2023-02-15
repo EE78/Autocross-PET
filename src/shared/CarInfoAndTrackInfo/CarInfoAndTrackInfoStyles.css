@@ -9,7 +9,7 @@
 .car-info__container h1 {
     margin: 10px;
     font-weight: 200;
-    font-size: 32px;
+    font-size: 42px;
 }
 
 .track-info__container {
@@ -28,24 +28,22 @@
     font-weight: 200;
     text-align: center;
     cursor: pointer;
-    background-color: rgba(28,28,28,0);
+    background-color: rgba(28, 28, 28, 0);
     border: 2px rgb(73, 138, 235) solid;
     color: rgb(73, 138, 235);
     font-weight: 100;
 }
 
 .car-info__container button {
-    height: 75px;
+    font-size: 36px;
+    padding: 30px;
+    margin-top: 50px;
     border-radius: 10px;
-    font-size: 20px;
+    background-color: rgba(28, 28, 28, 0);
+    border: 2px rgb(60, 126, 23) solid;
+    color: #3c7e17;
     cursor: pointer;
-    font-weight: 200;
     text-align: center;
-    cursor: pointer;
-    background-color: rgba(28,28,28,0);
-    border: 2px rgb(73, 138, 235) solid;
-    color: rgb(73, 138, 235);
-    font-weight: 100;
 }
 
 .track-info__container button:hover {

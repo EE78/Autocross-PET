@@ -1,0 +1,19 @@
+.aboutcross__wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper__video {
+    background-color: rgb(0, 2, 32);
+    margin-right: 50px;
+    width: 1000px;
+    height: 650px;
+    color: white;
+    font-size: 35px;
+}
+
+.wrapper__text {
+    width: 50%;
+}
