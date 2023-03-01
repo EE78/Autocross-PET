@@ -15,9 +15,9 @@ export const Start = () => {
       <div className="wrapper__menu">
         <MenuTitle>АВТОМОБИЛЬНЫЙ КРОСС</MenuTitle>
         <div className="menu__links">
-          <MenuLink>О КРОССЕ</MenuLink>
-          <MenuLink>АВТОМОБИЛИ</MenuLink>
-          <MenuLink>ГОНОЧНЫЕ ТРЕКИ</MenuLink>
+          <MenuLink href={`about`}>О КРОССЕ</MenuLink>
+          <MenuLink href={`cars`}>АВТОМОБИЛИ</MenuLink>
+          <MenuLink href={`tracks`}>ГОНОЧНЫЕ ТРЕКИ</MenuLink>
           <MenuLink>ЛИТЕРАТУРА</MenuLink>
           <MenuLink>ГАЛЕРЕЯ</MenuLink>
         </div>

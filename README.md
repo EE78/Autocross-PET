@@ -6,4 +6,4 @@
 
 ## Технологии
 
-Основой стека применяемых технологий выбраны React, HTML, CSS
+Основой стека применяемых технологий выбраны React, HTML, CSS, Styled Components, React Router

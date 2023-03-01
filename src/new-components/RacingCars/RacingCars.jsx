@@ -6,6 +6,7 @@ import { ModalStyles } from "../../shared/Ui/ButtonAndModalStyles/ModalStyles";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
+import { Footer } from "../Footer/Footer";
 import {
   RacingCarsCollection,
   CollectionButton,
@@ -42,7 +43,7 @@ const RacingCars = () => {
   };
 
   return (
-    <div>
+    <div className="app-container">
       <RacingCarsTitle>КЛАССЫ КРОССОВЫХ АВТО</RacingCarsTitle>
       <ImageCarousel />
       <RacingCarsCollection>{СhooseCar}</RacingCarsCollection>
@@ -60,6 +61,7 @@ const RacingCars = () => {
           </Box>
         </Fade>
       </Modal>
+      <Footer />
     </div>
   );
 };

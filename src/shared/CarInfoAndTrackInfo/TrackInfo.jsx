@@ -10,7 +10,7 @@ const TrackInfo = ({
 }) => {
   return (
     <div className="track-info__container">
-      <img src={image} alt=" "></img>
+      {/* <img src={image} alt=" "></img> */}
       <h1>СТАТУС ГОНКИ: {raceStatus}</h1>
       <h1>РЕЗУЛЬТАТЫ ГОНКИ: {raceResults}</h1>
       <h1>ЭТАПОВ ВСЕГО: {raceStages}</h1>

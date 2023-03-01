@@ -1,10 +1,11 @@
 import React from "react";
 import { AboutCrossText } from "./StyledAboutCross";
 import "./styles.css";
+import { Footer } from "../Footer/Footer";
 
 export const AboutCross = () => {
   return (
-    <div className="aboutcross__wrapper">
+    <div className="app-container">
       <div className="wrapper__text">
         <AboutCrossText>
           Автокросс — это группа дисциплин автомобильного спорта, являющих собой
@@ -32,9 +33,7 @@ export const AboutCross = () => {
           уровня и статуса, располагаются в каждом регионе Сибири.
         </AboutCrossText>
       </div>
-      <div className="wrapper__video">
-        <p>ЗДЕСЬ БУДЕТ ВИДЕО</p>
-      </div>
+      <Footer />
     </div>
   );
 };

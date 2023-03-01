@@ -17,7 +17,7 @@ const WrapperText = styled.p`
 `;
 
 const MenuTitle = styled.h1`
-  color: #3c7e17;
+  color: white;
   font-size: 92px;
   font-weight: 400;
   margin-bottom: 0;
